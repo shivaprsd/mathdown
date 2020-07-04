@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>MathDown</title>
+    <title>%t</title>
     <link rel="stylesheet" href="github-markdown.css">
     <style>
     @media screen {
@@ -92,13 +92,18 @@
       }
       window.onload = function() {
         preview = document.getElementById("preview");
+        input = document.getElementById("input");
         converter = markdownit().set({ html: true });
         toggleTheme = document.getElementById("toggle-theme");
 
         toggleTheme.onclick = function() {
           document.body.classList.toggle("night-mode");
         }
+        updatePreview(input.value);
       }
     </script>
+    <textarea id="input" hidden readonly disabled>
+%s
+    </textarea>
   </body>
 </html>
