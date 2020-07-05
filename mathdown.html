@@ -11,6 +11,7 @@
         margin: 0;
         height: 100%;
         overflow: hidden;
+        transition: 0.5s background-color, 0.5s color;
       }
       .wrapper {
         width: 50%;
@@ -59,10 +60,12 @@
         right: 0.4rem;
       }
       .night-mode {
-        background-color: #212121;
-        color: #e0e0e0;
+        background-color: #212121 !important;
+        color: #e0e0e0 !important;
       }
-      code, table { color: #000000 !important; }
+      .night-mode pre, .night-mode table tr {
+        background-color: rgba(128, 128, 128, 0.1) !important;
+      }
       .container { overflow: hidden; }
     }
     @media screen and (max-width: 599px) {
@@ -75,6 +78,11 @@
       .editor.wrapper, #toggle-theme, #print-btn { display: none; }
       .preview.wrapper { width: 100%; }
       .preview { color: #000000; }
+      pre, code { background-color: #ffffff !important; }
+    }
+    .mjx-chtml {
+      margin-top: -0.5rem !important;
+      margin-bottom: 0.5rem !important;
     }
     </style>
     <script type="text/x-mathjax-config">
